@@ -1,6 +1,7 @@
 # Xilinx_VitisAurora_QSFP
 Vitis Example project for adding an Aurora core connected to the QSFP interface of Alveo U50
 
+Makefile is in the "u50" folder, and adopts a similar structure as some Vitis tutorial examples
 
 Two example projects I was experimenting on are added to the repository, one for the 1-lane Aurora core and the second for the 4-lane Aurora core. 
 
