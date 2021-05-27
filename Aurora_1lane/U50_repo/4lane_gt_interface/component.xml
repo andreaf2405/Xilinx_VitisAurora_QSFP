@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>user.org</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>Aurora_GT_intf_4lane</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>gt_serial_port</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="gt" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="gt_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>GTX_P</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>GT_SERIAL_TX_0_txp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>GTX_N</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>GT_SERIAL_TX_0_txn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>GRX_P</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>GT_SERIAL_RX_0_rxp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>GRX_N</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>GT_SERIAL_RX_0_rxn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>AuroraGT_rx</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="display_aurora" spirit:name="GT_Serial_Transceiver_Pins_RX" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="display_aurora" spirit:name="GT_Serial_Transceiver_Pins_RX_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RXN</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>AuroraGT_rxn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RXP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>AuroraGT_rxp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>AuroraGT_tx</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="display_aurora" spirit:name="GT_Serial_Transceiver_Pins_TX" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="display_aurora" spirit:name="GT_Serial_Transceiver_Pins_TX_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TXN</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>AuroraGT_txn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TXP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>AuroraGT_txp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>Aurora_GT_intf</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>ea8b1d33</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>Aurora_GT_intf</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>76e327b9</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>f92e9879</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>GT_SERIAL_RX_0_rxn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>GT_SERIAL_RX_0_rxp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>GT_SERIAL_TX_0_txn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>GT_SERIAL_TX_0_txp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>AuroraGT_rxn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>AuroraGT_rxp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>AuroraGT_txn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>AuroraGT_txp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">1</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+  </spirit:model>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/design_1_ooc.xdc</spirit:name>
+        <spirit:userFileType>xdc</spirit:userFileType>
+        <spirit:userFileType>SCOPED_TO_REF_design_1</spirit:userFileType>
+        <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/Aurora_GT_intf.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_76e327b9</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/Aurora_GT_intf.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/Aurora_GT_intf_4lane_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_f92e9879</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>Aurora_GT_intf_v1_0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">Aurora_GT_intf_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">virtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qvirtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">versal</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qkintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qkintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">akintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qzynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplusHBM</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintexu</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>Aurora_GT_intf_v1_0</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>5</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2021-04-07T14:15:15Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@96490ee_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66a081da_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@150e9a75_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26d3f946_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bdb1b55_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e4c8388_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5595c559_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f532e6f_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12407c59_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b4a0d9a_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c0890a_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1276725_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16e7efa6_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15a41b55_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2489c4f0_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f695be8_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35dd6322_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bc7433c_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5adcb842_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dbb6a9a_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57e9cac3_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cd193e_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37b96827_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61455b6e_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7869ae32_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5139455a_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7402f9b7_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ff92189_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51480efc_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3832e23b_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@233cbc85_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68367588_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56d0e311_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45a05c2_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34406fce_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76a48cb4_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f2a0e4c_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@790f2e2_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6942b366_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42b5b7ac_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44fde5bc_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@754c4be2_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4030841b_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2509480f_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5506cea2_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@147f91fa_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43a54c0_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e4b1160_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47d37982_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bba2c27_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15021923_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a11bc7e_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c2caa83_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59b51a7_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44856eb4_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5123e93d_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@191416ea_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d1e8d9d_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@271d4f21_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@341b76ba_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b834d54_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6876765c_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@523c59be_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43c8196d_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@149b2034_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c62ac65_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b1d5cf6_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5da98f14_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48396b28_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5977eda9_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c73bc43_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@411ca922_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1dd1b94a_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@534092dc_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@169b8055_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d68bd88_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@203bea09_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b7a76a6_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7631567e_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b958600_ARCHIVE_LOCATION">/home/aferretti/U50_tutorial_base/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67877658_ARCHIVE_LOCATION">/home/aferretti/U50_repo/1lane_gt_interface/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1710d4c3_ARCHIVE_LOCATION">/home/aferretti/U50_repo/1lane_gt_interface/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1323fcb6_ARCHIVE_LOCATION">/home/aferretti/U50_repo/1lane_gt_interface/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5747117a_ARCHIVE_LOCATION">/home/aferretti/U50_repo/1lane_gt_interface/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b85ec75_ARCHIVE_LOCATION">/home/aferretti/U50_repo/1lane_gt_interface/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37362416_ARCHIVE_LOCATION">/home/aferretti/U50_repo/1lane_gt_interface/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a1ca592_ARCHIVE_LOCATION">/home/aferretti/U50_repo/1lane_gt_interface/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58cc89dd_ARCHIVE_LOCATION">/home/aferretti/U50_repo/1lane_gt_interface/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@255fc8b3_ARCHIVE_LOCATION">/home/aferretti/U50_repo/1lane_gt_interface/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@435fb23c_ARCHIVE_LOCATION">/home/aferretti/U50_repo/1lane_gt_interface/Aurora_intfGT_2</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26cba147_ARCHIVE_LOCATION">/home/aferretti/work/evo_pl/develop/evo_pl/vitis/Aurora_1lane/U50_repo/4lane_gt_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dc1ea2a_ARCHIVE_LOCATION">/home/aferretti/work/evo_pl/develop/evo_pl/vitis/Aurora_1lane/U50_repo/4lane_gt_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52fcb49c_ARCHIVE_LOCATION">/home/aferretti/work/evo_pl/develop/evo_pl/vitis/Aurora_1lane/U50_repo/4lane_gt_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10455fbe_ARCHIVE_LOCATION">/home/aferretti/work/evo_pl/develop/evo_pl/vitis/Aurora_1lane/U50_repo/4lane_gt_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e4b45c4_ARCHIVE_LOCATION">/home/aferretti/work/evo_pl/develop/evo_pl/vitis/Aurora_1lane/U50_repo/4lane_gt_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6afcdd81_ARCHIVE_LOCATION">/home/aferretti/work/evo_pl/develop/evo_pl/vitis/Aurora_1lane/U50_repo/4lane_gt_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f8fd304_ARCHIVE_LOCATION">/home/aferretti/work/evo_pl/develop/evo_pl/vitis/Aurora_1lane/U50_repo/4lane_gt_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7152033d_ARCHIVE_LOCATION">/home/aferretti/work/evo_pl/develop/evo_pl/vitis/Aurora_1lane/U50_repo/4lane_gt_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@259b371e_ARCHIVE_LOCATION">/home/aferretti/work/evo_pl/develop/evo_pl/vitis/Aurora_1lane/U50_repo/4lane_gt_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2369d17f_ARCHIVE_LOCATION">/home/aferretti/work/evo_pl/develop/evo_pl/vitis/Aurora_1lane/U50_repo/4lane_gt_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1da571d4_ARCHIVE_LOCATION">/home/aferretti/work/evo_pl/develop/evo_pl/vitis/Aurora_1lane/U50_repo/4lane_gt_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4892ee42_ARCHIVE_LOCATION">/home/aferretti/work/evo_pl/develop/evo_pl/vitis/Aurora_1lane/U50_repo/4lane_gt_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f1784cf_ARCHIVE_LOCATION">/home/aferretti/work/evo_pl/develop/evo_pl/vitis/Aurora_1lane/U50_repo/4lane_gt_interface</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b9eb168_ARCHIVE_LOCATION">/home/aferretti/work/evo_pl/develop/evo_pl/vitis/Aurora_1lane/U50_repo/4lane_gt_interface</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="b7b82b63"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="ab58c8d9"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="643fc97a"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="c92b92ce"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

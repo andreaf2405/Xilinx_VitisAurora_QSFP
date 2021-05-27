@@ -1,0 +1,190 @@
+
+*** Running vivado
+    with args -log Aurora_GT_intf.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Aurora_GT_intf.tcl
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+Sourcing tcl script '/home/aferretti/.Xilinx/Vivado/Vivado_init.tcl'
+============================
+============================
+Hi! We have sourced init.tcl
+============================
+============================
+source Aurora_GT_intf.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/aferretti/Aurora_4lane/U50_repo/4lane_gt_interface'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/aferretti/Aurora_4lane/U50_repo/4lane_gt_interface' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/aferretti/Aurora_4lane/U50_repo/4lane_gt_interface/tmp_edit_project.runs/synth_1'.)
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/aferretti/U50_tutorial_base/Example_design_modif_2/project_Aurora_intf3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/aferretti/Aminware_To_Alveo/build/XilRefDesign/xilinx_u50_qsfp_v1_1_2/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/aferretti/U50_tutorial_base/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.2/data/ip'.
+WARNING: [IP_Flow 19-4830] Duplicate Interface found for 'test:user:GT_aurora_tx:1.0'. The one found in location '/home/aferretti/Aminware_To_Alveo/build/XilRefDesign/xilinx_u50_qsfp_v1_1_2/ip_repo/GTX_aurora.xml' will take precedence over the same Interface in location '/home/aferretti/U50_tutorial_base/ip_repo/GT_aurora_tx.xml'
+Command: synth_design -top Aurora_GT_intf -part xcu50-fsvh2104-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu50'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 4231
+WARNING: [Synth 8-1935] empty port in module declaration [/home/aferretti/Aurora_4lane/U50_repo/4lane_gt_interface/src/Aurora_GT_intf.v:34]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2390.879 ; gain = 0.000 ; free physical = 32230 ; free virtual = 49097
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Aurora_GT_intf' [/home/aferretti/Aurora_4lane/U50_repo/4lane_gt_interface/src/Aurora_GT_intf.v:23]
+WARNING: [Synth 8-308] ignoring empty port [/home/aferretti/Aurora_4lane/U50_repo/4lane_gt_interface/src/Aurora_GT_intf.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'Aurora_GT_intf' (1#1) [/home/aferretti/Aurora_4lane/U50_repo/4lane_gt_interface/src/Aurora_GT_intf.v:23]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2390.879 ; gain = 0.000 ; free physical = 32624 ; free virtual = 49493
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2390.879 ; gain = 0.000 ; free physical = 32963 ; free virtual = 49831
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu50-fsvh2104-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xcu50-fsvh2104-2-e
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2398.746 ; gain = 7.867 ; free physical = 32974 ; free virtual = 49842
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2398.746 ; gain = 7.867 ; free physical = 32934 ; free virtual = 49802
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 5952 (col length:93)
+BRAMs: 2688 (col length: RAMB18 192 RAMB36 96)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 3141.105 ; gain = 750.227 ; free physical = 31892 ; free virtual = 48762
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 3141.105 ; gain = 750.227 ; free physical = 31889 ; free virtual = 48760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 3141.105 ; gain = 750.227 ; free physical = 31889 ; free virtual = 48760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 3141.105 ; gain = 750.227 ; free physical = 31889 ; free virtual = 48760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 3141.105 ; gain = 750.227 ; free physical = 31889 ; free virtual = 48760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 3141.105 ; gain = 750.227 ; free physical = 31889 ; free virtual = 48760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 3141.105 ; gain = 750.227 ; free physical = 31889 ; free virtual = 48760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 3141.105 ; gain = 750.227 ; free physical = 31889 ; free virtual = 48760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 3141.105 ; gain = 750.227 ; free physical = 31889 ; free virtual = 48760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |IBUF |    16|
+|2     |OBUF |    16|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    32|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 3141.105 ; gain = 750.227 ; free physical = 31889 ; free virtual = 48760
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 3141.105 ; gain = 750.227 ; free physical = 31889 ; free virtual = 48760
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 3141.113 ; gain = 750.227 ; free physical = 31889 ; free virtual = 48760
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3147.387 ; gain = 0.000 ; free physical = 31974 ; free virtual = 48845
+INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3178.062 ; gain = 0.000 ; free physical = 31879 ; free virtual = 48750
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 16 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+21 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3178.062 ; gain = 787.320 ; free physical = 32018 ; free virtual = 48889
+INFO: [Common 17-1381] The checkpoint '/home/aferretti/Aurora_4lane/U50_repo/4lane_gt_interface/tmp_edit_project.runs/synth_1/Aurora_GT_intf.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Aurora_GT_intf_utilization_synth.rpt -pb Aurora_GT_intf_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Apr  9 17:39:19 2021...

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xcu50-fsvh2104-2-e" LaunchTime="1618326828">
+  <File Type="VDS-TIMING-PB" Name="Aurora_GT_intf_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Aurora_GT_intf_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="Aurora_GT_intf.dcp"/>
+  <File Type="PA-TCL" Name="Aurora_GT_intf.tcl"/>
+  <File Type="REPORTS-TCL" Name="Aurora_GT_intf_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Aurora_GT_intf.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="Aurora_GT_intf_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="Aurora_GT_intf_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Aurora_GT_intf_utilization_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/src/Aurora_GT_intf.v">
+      <FileInfo>
+        <Attr Name="Library" Val=""/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/component.xml">
+      <FileInfo SFType="IPXACT"/>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Aurora_GT_intf"/>
+      <Option Name="TopRTLFile" Val="$PPRDIR/src/Aurora_GT_intf.v"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/src/design_1_ooc.xdc">
+      <FileInfo>
+        <Attr Name="Library" Val=""/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="out_of_context"/>
+        <Attr Name="ScopedToRef" Val="design_1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
